@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bc59816b1e258da61a2783f946c250c",
+    "revision": "667d523e9a557f71b909fcb2c439d4b3",
     "url": "/rubiks-timer/index.html"
   },
   {
-    "revision": "47f0fc28ffd5fea0c12a",
+    "revision": "4a8757d2861b12520cda",
     "url": "/rubiks-timer/static/css/main.96eedf2b.chunk.css"
   },
   {
-    "revision": "d029817a67ef124cf8af",
-    "url": "/rubiks-timer/static/js/2.07bea225.chunk.js"
+    "revision": "93e2374bd3f64ddde272",
+    "url": "/rubiks-timer/static/js/2.825041d7.chunk.js"
   },
   {
     "revision": "0e77ccc9007464ffd437757d6ef9c957",
-    "url": "/rubiks-timer/static/js/2.07bea225.chunk.js.LICENSE.txt"
+    "url": "/rubiks-timer/static/js/2.825041d7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "47f0fc28ffd5fea0c12a",
-    "url": "/rubiks-timer/static/js/main.f6b17fa7.chunk.js"
+    "revision": "4a8757d2861b12520cda",
+    "url": "/rubiks-timer/static/js/main.3f09d7cf.chunk.js"
   },
   {
     "revision": "21cf184268c6e58ff019",
