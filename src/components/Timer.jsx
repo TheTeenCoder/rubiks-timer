@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLastTime } from "../hooks/storage";
+import { useLastTime, useMainData } from "../hooks/storage";
 
 const Timer = () => {
   const [time, setTime] = useState(0.0);
@@ -7,6 +7,7 @@ const Timer = () => {
   const SPACE_KEY = 32;
   const counterRef = useRef();
   const [lastTime, setLastTime] = useLastTime();
+  const [data, setData] = useMainData();
 
   const handleIncrement = () => {
     setTime(0.0);
@@ -20,6 +21,7 @@ const Timer = () => {
     clearInterval(counterRef.current);
     setIsCounting(false);
     setLastTime(time.toFixed(1));
+    setData((data) => data.times.push(time));
   };
 
   const handleKeyDown = (event) => {
@@ -40,7 +42,6 @@ const Timer = () => {
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-    console.log("test");
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
@@ -48,7 +49,7 @@ const Timer = () => {
 
   return (
     <div className="text-gray-700 justify-center items-center flex flex-col container texct-gray-300">
-      {lastTime && <h3>Last time: {lastTime}s</h3>}
+      {(lastTime && !isCounting) && <h3>Last time: {lastTime}s</h3>}
       <span className="flex items-center space-x-2">
         <h1>{time.toFixed(1)}</h1>
         {!isCounting && <h4>seconds.</h4>}
